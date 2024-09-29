@@ -1,5 +1,8 @@
 // server.js
 
+// Import dotenv to manage environment variables
+require('dotenv').config();
+
 // Import Express.js for building the server
 const express = require('express');
 
@@ -12,8 +15,7 @@ const bodyParser = require('body-parser');
 // Import OpenAI configuration and API client
 const { Configuration, OpenAIApi } = require('openai');
 
-// Import dotenv to manage environment variables
-require('dotenv').config();
+
 
 // server.js
 
@@ -68,6 +70,6 @@ app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
   });
 
-openai.listModels()
-  .then(response => console.log(response.data))
-  .catch(error => console.error(error));
+// openai.listModels()
+//  .then(response => console.log(response.data))
+//  .catch(error => console.error(error));
