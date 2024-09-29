@@ -68,3 +68,6 @@ app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
   });
 
+openai.listModels()
+  .then(response => console.log(response.data))
+  .catch(error => console.error(error));
