@@ -4,9 +4,18 @@
   "description": "A web app that interacts with the OpenAI API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "start": "nodemon server.js"
+},
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "openai": "^4.65.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
 }
