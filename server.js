@@ -9,6 +9,8 @@ const cors = require('cors');                          // Middleware to enable C
 const bodyParser = require('body-parser');             // Middleware to parse incoming request bodies
 const { Configuration, OpenAIApi } = require('openai'); // OpenAI API client
 
+import OpenAI from "openai";
+
 // Create an instance of the Express application
 const app = express();
 const port = 3000; // Define the port number
@@ -18,8 +20,8 @@ app.use(cors());              // Enable CORS for all routes
 app.use(bodyParser.json());   // Parse JSON bodies
 
 // Configure the OpenAI API client with your API key
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY, // Your OpenAI API key from the .env file
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 // Create an OpenAIApi instance
